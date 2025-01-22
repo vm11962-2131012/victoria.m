@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mission 1</title>
+
+    <!-- Including the main.css file for styling -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Including the Font Awesome CSS library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="img/12275372-hd_1920_1028_60fps.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navigation bar -->
+    <div class="topnav" id="myTopnav">
+        <!-- Links to different sections -->
+        <a href="index.html">Introduction</a>
+
+        <!-- Active link pointing to the section1.html page -->
+        <a class="active" href="section1.html">Mission 1</a>
+
+        <a href="section2.html">Mission 2</a>
+        <a href="section3.html">Mission 3</a>
+        <a href="section4.html">Mission 4</a>
+        <a href="see_also.html">See Also</a>
+        <a href="references.html">References</a>
+
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+        <!-- Section 1 content -->
+        <h2>Blue Ghost Mission I</h2>
+
+        NASA is developing a series of lunar deliveries and Firefly's Blue Ghost Lander will help mark the beginnings of controlled human existence on the Moon. The lander will be on the Moon for 14 days studying the intricate subsurface up to 700 miles deep. By exploring an untouched area of the moon, using magnetotellurics will help conduct analysis on surface and magnetic fields of Moon surface materials helping define their compositions.<br>
+        
+        <br>
+        Expected Date of Arrival on the Lunar Surface:
+        <!-- Display the countdown timer in an element -->
+        <p id="demo"></p>
+
+        <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("March,2 2025 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);
+        </script>
+                
+        <br><img src="img/blue-ghost.webp" style="width: 80%; height: auto;">
+        <br><i><b>"Firefly's Blue Ghost Lander" credits to NASA</i></b><br>
+
+        <h4>Lunar Magnetotelluric Sounder</h4>
+        The LMS is the given name of the device that will help NASA explore the 350 mile wide basin, Mare Crisium, which is a large spot on the Moon visible from Earth. Since the Apollo missions were conducted West of the basin, the structure of the Moon is yet to be configured by the LMS which will be done so by recording the Moon's geophysical measurements. These will help determine closer results to the actual composition of the entire Moon.
+
+        <br>
+    </div>
+    
+    <!-- Including the main.js file for JavaScript functionality -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
